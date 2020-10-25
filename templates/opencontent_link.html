@@ -1,0 +1,45 @@
+<{if $link.premium =="2"}>	
+<table width='100%' bgcolor="#FFFFCC" cellpadding="10" cellspacing='1'>
+<{elseif $link.premium =="3"}>	
+<table width='100%' bgcolor="#FFFFCC" cellpadding="10" cellspacing='1'>
+<{else}>
+<table width='100%' cellspacing='1'>
+<{/if}>
+  <tr>
+  <{if $link.logourl != ""}>
+  <{if $link.premium != "0"}>
+    <td width='100' valign='top' align='left'><a href="<{$xoops_url}>/modules/opencontent/singlelink.php?cid=<{$link.cid}>&lid=<{$link.id}>"><img src="images/shots/<{$link.logourl}>" border='0' alt=" "></a></td>
+    <td width='8'><img src="/images/spacer.gif" width="8"></td>
+	<td width='60%' align='left' valign="bottom">
+  <{/if}>
+  <{else}>
+    <td width='70%' align='left' valign="bottom">
+  <{/if}>
+	<{$link.adminlink}><a href="<{$xoops_url}>/modules/opencontent/singlelink.php?cid=<{$link.cid}>&lid=<{$link.id}>"><b><{$link.title}></b></a> <!-- (<{$lang_category}> <{$link.category}>) --><br>
+	<strong><{$lang_busaddress}></strong> <{$link.address}><br>
+	<strong><{$lang_city}></strong> <{$link.city}>, <strong><{$lang_state}></strong> <{$link.state}>, <strong><{$lang_zip}></strong> <{$link.zip}><br>
+	<strong><{$lang_phone}></strong> <{$link.phone}>,
+<{if $link.fax != ""}>
+	<strong><{$lang_fax}> </strong><{$link.fax}>
+<{/if}><br>
+	</td>
+    <td align='right' width='30%'><a href="<{$xoops_url}>/modules/opencontent/ratelink.php?cid=<{$link.cid}>&lid=<{$link.id}>"><b><{$lang_rating}></b><{$link.rating}> (<{$link.votes}>)</a>
+<br>
+<table border=0>
+<tr>
+<td>
+</td>
+</tr>
+</table>
+
+	</td>
+  </tr>
+ </table>
+ <table border="0" width="100%">
+  <tr>
+    <td colspan="2"><a href="<{$xoops_url}>/modules/opencontent/singlelink.php?cid=<{$link.cid}>&lid=<{$link.id}>">More Info</a> | <a href="<{$xoops_url}>/modules/opencontent/ratelink.php?cid=<{$link.cid}>&lid=<{$link.id}>"><{$lang_ratethissite}></a> | <a href="<{$xoops_url}>/modules/opencontent/modlink.php?lid=<{$link.id}>"><{$lang_modify}></a> | <a target="_top" href="mailto:?subject=<{$link.mail_subject}>&body=<{$link.mail_body}>"><{$lang_tellafriend}></a> | <a href="<{$xoops_url}>/modules/opencontent/singlelink.php?cid=<{$link.cid}>&lid=<{$link.id}>"><{$lang_comments}> (<{$link.comments}>)</a>
+<br>
+</td>
+  </tr>
+</table>
+<hr>
